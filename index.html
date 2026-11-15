@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Black &amp; White — a personality game</title>
+  <meta name="description" content="Seventeen quick choices. No overthinking. Black or white — find out who you are when you don't think twice.">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta property="og:title" content="Black & White">
+  <meta property="og:description" content="Seventeen quick choices. No overthinking. Discover your nature.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%23f4f2ee' stroke='%230a0a0a'/%3E%3Cpath d='M16 1a15 15 0 0 1 0 30z' fill='%230a0a0a'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;1,9..144,300&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-screen="intro">
+
+  <!-- INTRO -->
+  <section id="intro" class="screen active">
+    <div class="intro-inner">
+      <p class="eyebrow">A personality game</p>
+      <h1 class="title">Black <span class="amp">&amp;</span> White</h1>
+      <div class="panel">
+        <p class="lead">Seventeen quick choices. Two options each.<br>No overthinking — go with your gut.</p>
+        <label class="field">
+          <span>Your name <em>(optional)</em></span>
+          <input id="name" type="text" maxlength="24" autocomplete="given-name" placeholder="Who's playing?">
+        </label>
+        <button id="start" class="btn" type="button">Begin</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUIZ -->
+  <section id="quiz" class="screen">
+    <header class="top">
+      <button id="back" class="ghost" type="button" aria-label="Previous question">← Back</button>
+      <span id="counter" class="counter">01 / 17</span>
+      <div class="progress"><i id="bar"></i></div>
+    </header>
+    <div id="stage" class="stage" aria-live="polite"></div>
+    <p class="hint">Click a side &nbsp;·&nbsp; or use ← → keys</p>
+  </section>
+
+  <!-- RESULT -->
+  <section id="result" class="screen">
+    <div id="resultBody" class="wrap"></div>
+  </section>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
